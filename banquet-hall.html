@@ -133,15 +133,11 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-stone-700">
+        <!-- Desktop Navigation Links (strictly requested items) -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-stone-700">
           <a href="#hero" class="hover:text-maroon-900 transition-colors py-1">Home</a>
           <a href="#about" class="hover:text-maroon-900 transition-colors py-1">About</a>
-          <a href="#events" class="hover:text-maroon-900 transition-colors py-1">Events</a>
-          <a href="#cuisine" class="hover:text-maroon-900 transition-colors py-1">Cuisine &amp; Jain Food</a>
           <a href="#gallery" class="hover:text-maroon-900 transition-colors py-1">Gallery</a>
-          <a href="#amenities" class="hover:text-maroon-900 transition-colors py-1">Capacity &amp; Amenities</a>
-          <a href="#testimonials" class="hover:text-maroon-900 transition-colors py-1">Reviews</a>
           <a href="#location" class="hover:text-maroon-900 transition-colors py-1">Location</a>
         </nav>
 
@@ -156,7 +152,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="xl:hidden flex items-center">
+        <div class="lg:hidden flex items-center">
           <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg text-stone-700 hover:text-maroon-900 hover:bg-stone-100 transition-colors">
             <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -171,18 +167,13 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
       <a href="#hero" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Home</a>
-      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">About Venue</a>
-      <a href="#events" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Events Hosted</a>
-      <a href="#cuisine" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Cuisine &amp; Jain Food</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">About</a>
       <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Gallery</a>
-      <a href="#amenities" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Capacity (300 Seated / 500 Floating)</a>
-      <a href="#testimonials" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Reviews (4.8 ★)</a>
-      <a href="#location" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Location &amp; Map</a>
+      <a href="#location" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Location</a>
       <div class="pt-2 flex flex-col gap-2">
         <a href="tel:09833557900" class="w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-maroon-900 bg-gold-100 border border-gold-300">Call Now: 098335 57900</a>
-        <a href="https://wa.me/919833557900?text=Hello%20Elegant%20Banquets%20Juhu%2C%20I%20would%20like%20to%20inquire%20about%20booking%20your%20spacious%20AC%20hall." target="_blank" rel="noopener noreferrer" class="w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-[#25D366]">Chat on WhatsApp</a>
         <a href="#booking" class="mobile-nav-link block w-full text-center px-4 py-3 rounded-full text-sm font-semibold text-white bg-maroon-900 hover:bg-maroon-800 shadow">Book Your Date</a>
       </div>
     </div>
@@ -191,7 +182,7 @@
   <!-- 1. HERO SECTION -->
   <section id="hero" class="relative min-h-[92vh] flex items-center justify-center text-white overflow-hidden">
     <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105" 
-         style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=80');">
+         style="background-image: url('/banquetthree.jpeg');">
     </div>
     
     <div class="absolute inset-0 z-10 bg-gradient-to-b from-maroon-950/92 via-stone-950/85 to-maroon-950/95"></div>
@@ -310,10 +301,10 @@
 
       <div class="lg:col-span-6 relative">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80" alt="Spacious AC Hall at Elegant Banquets Juhu" class="w-full h-[460px] object-cover" />
+          <img src="/banquettwo.jpeg" alt="Spacious AC Hall at Elegant Banquets Juhu" class="w-full h-[460px] object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/80 via-transparent to-transparent"></div>
           <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-gold-300 text-stone-900">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-gold-700 block">Prime Mumbai Venue</span>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-gold-700 block">Prime Location · Ground Floor</span>
             <h3 class="font-serif text-lg font-bold text-maroon-950">Bloom Hotel, Juhu Tara Road</h3>
             <p class="text-xs text-stone-600 mt-0.5">Ground floor · Valet parking available · 300 Seated / 500 Floating</p>
           </div>
@@ -416,6 +407,75 @@
       <div class="p-7 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
         <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Thai Feasts</h3>
         <p class="text-stone-600 text-sm leading-relaxed">Aromatic Thai green and red curries, authentic Pad Thai noodles, Som Tum raw papaya salad, and jasmine rice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300 mb-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">Venue Showcase</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-maroon-950 mb-4">Event &amp; Hall Gallery</h2>
+      <p class="text-stone-600 text-base sm:text-lg">
+        Explore real photos of Elegant Banquets Juhu at Bloom Hotel on Juhu Tara Road.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl bg-stone-100 aspect-[4/3] border border-stone-200">
+        <img src="/banquetthree.jpeg" alt="Grand AC Ballroom" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/90 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+          <span class="text-[11px] font-bold uppercase bg-gold-400 text-maroon-950 px-2.5 py-1 rounded-full w-max mb-1">Spacious AC Hall</span>
+          <h3 class="font-serif text-lg font-bold">Grand AC Ballroom &amp; Banquet View</h3>
+          <p class="text-xs text-stone-200">Central cooling, ornate crystal chandeliers &amp; 300/500 capacity</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl bg-stone-100 aspect-[4/3] border border-stone-200">
+        <img src="/banquettwo.jpeg" alt="Royal Chiavari Seating" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/90 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+          <span class="text-[11px] font-bold uppercase bg-gold-400 text-maroon-950 px-2.5 py-1 rounded-full w-max mb-1">Dining &amp; Decor</span>
+          <h3 class="font-serif text-lg font-bold">Royal Chiavari Seating &amp; Chandeliers</h3>
+          <p class="text-xs text-stone-200">Round banquet tables draped in vibrant linens with custom centerpieces</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl bg-stone-100 aspect-[4/3] border border-stone-200">
+        <img src="/banquetone.jpeg" alt="Celebration Entrance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/90 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+          <span class="text-[11px] font-bold uppercase bg-gold-400 text-maroon-950 px-2.5 py-1 rounded-full w-max mb-1">Grand Entrance</span>
+          <h3 class="font-serif text-lg font-bold">Grand Celebration Entrance &amp; Arch</h3>
+          <p class="text-xs text-stone-200">Peach &amp; gold balloon arch, shimmer curtains and LED lighting</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl bg-stone-100 aspect-[4/3] border border-stone-200">
+        <img src="/banquetfour.jpeg" alt="Festive Setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/90 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+          <span class="text-[11px] font-bold uppercase bg-gold-400 text-maroon-950 px-2.5 py-1 rounded-full w-max mb-1">Event Setup</span>
+          <h3 class="font-serif text-lg font-bold">Festive Banquet Celebration Setup</h3>
+          <p class="text-xs text-stone-200">Ambient celebration lighting, acoustic audio &amp; party layouts</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl bg-stone-100 aspect-[4/3] border border-stone-200">
+        <img src="/banquetonefive.jpeg" alt="Hall Ambiance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/90 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+          <span class="text-[11px] font-bold uppercase bg-gold-400 text-maroon-950 px-2.5 py-1 rounded-full w-max mb-1">Hall Ambiance</span>
+          <h3 class="font-serif text-lg font-bold">Refined Banquet Ambiance &amp; Hospitality</h3>
+          <p class="text-xs text-stone-200">Impeccable styling and dedicated event specialists at Bloom Hotel</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl bg-stone-100 aspect-[4/3] border border-stone-200">
+        <img src="/screenshot.png" alt="Google Reviews 4.8 Rating" class="w-full h-full object-contain p-2 bg-white transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/90 via-maroon-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+          <span class="text-[11px] font-bold uppercase bg-gold-400 text-maroon-950 px-2.5 py-1 rounded-full w-max mb-1">4.8★ Rating</span>
+          <h3 class="font-serif text-lg font-bold">Google Business Profile &amp; Reviews</h3>
+          <p class="text-xs text-stone-200">4.8 ★ rating across 137 authentic Google reviews</p>
+        </div>
       </div>
     </div>
   </section>

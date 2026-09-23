@@ -46,56 +46,56 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: '1',
     category: 'wedding',
-    title: 'Grand Royal Mandap & Stage',
-    subtitle: 'Regal floral arches, crystal chandeliers, and opulent stage seating',
-    categoryLabel: 'Wedding',
-    imgSrc: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80',
-    largeImgSrc: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80',
+    title: 'Grand AC Ballroom & Banquet View',
+    subtitle: 'Spacious hall with central cooling, ornate crystal chandeliers, and expansive floor layout',
+    categoryLabel: 'Spacious AC Hall',
+    imgSrc: '/banquetthree.jpeg',
+    largeImgSrc: '/banquetthree.jpeg',
   },
   {
     id: '2',
-    category: 'haldi-mehendi',
-    title: 'Joyful Haldi & Mehendi Lounge',
-    subtitle: 'Vibrant marigold decor, brass urlis, colorful drapes, and traditional canopy',
-    categoryLabel: 'Haldi & Mehendi',
-    imgSrc: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80',
-    largeImgSrc: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=80',
+    category: 'wedding',
+    title: 'Royal Chiavari Seating & Chandeliers',
+    subtitle: 'Round dining tables draped in rich pink linens with gold Chiavari chairs and floral centerpieces',
+    categoryLabel: 'Dining & Decor',
+    imgSrc: '/banquettwo.jpeg',
+    largeImgSrc: '/banquettwo.jpeg',
   },
   {
     id: '3',
-    category: 'cocktail',
-    title: 'Evening Cocktail & Sangeet Soirée',
-    subtitle: 'Luminous ambient mood lighting, dance floor, bar setup & luxury banquet dining',
-    categoryLabel: 'Cocktail Party',
-    imgSrc: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
-    largeImgSrc: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80',
+    category: 'birthday',
+    title: 'Grand Celebration Entrance & Balloon Arch',
+    subtitle: 'Peach, white and metallic gold balloon arches with shimmer gold curtains and LED lighting',
+    categoryLabel: 'Grand Entrance',
+    imgSrc: '/banquetone.jpeg',
+    largeImgSrc: '/banquetone.jpeg',
   },
   {
     id: '4',
-    category: 'corporate',
-    title: 'Annual Corporate Gala & Awards',
-    subtitle: 'High-definition projection, state-of-the-art stage acoustics & executive seating',
-    categoryLabel: 'Corporate Event',
-    imgSrc: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80',
-    largeImgSrc: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=80',
+    category: 'cocktail',
+    title: 'Festive Banquet Celebration Setup',
+    subtitle: 'Ambient celebration lighting, premium audio, and dedicated party arrangements at Bloom Hotel',
+    categoryLabel: 'Event Setup',
+    imgSrc: '/banquetfour.jpeg',
+    largeImgSrc: '/banquetfour.jpeg',
   },
   {
     id: '5',
-    category: 'birthday',
-    title: 'Milestone Birthday Jubilee',
-    subtitle: 'Custom themed backdrops, gourmet dessert bar & joyful family dining layout',
-    categoryLabel: 'Birthday Party',
-    imgSrc: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
-    largeImgSrc: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1600&q=80',
+    category: 'corporate',
+    title: 'Refined Banquet Ambiance & Hospitality',
+    subtitle: 'Impeccable event styling, comfortable guest seating, and seamless banquet coordination',
+    categoryLabel: 'Hall Ambiance',
+    imgSrc: '/banquetonefive.jpeg',
+    largeImgSrc: '/banquetonefive.jpeg',
   },
   {
     id: '6',
     category: 'wedding',
-    title: 'Floral Entrance Aisle & Foyer',
-    subtitle: 'Pastel blooms, ambient warm lantern lanterns, and grand welcome passage',
-    categoryLabel: 'Wedding',
-    imgSrc: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80',
-    largeImgSrc: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80',
+    title: 'Google Business Profile & 4.8★ Reviews',
+    subtitle: 'Verified 4.8★ rating with 137 authentic Google reviews from satisfied event hosts',
+    categoryLabel: '4.8★ Verified',
+    imgSrc: '/screenshot.png',
+    largeImgSrc: '/screenshot.png',
   },
 ];
 
@@ -317,20 +317,17 @@ export default function HomePage() {
               </div>
             </a>
 
-            <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-stone-700">
+            <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-stone-700">
               <a href="#hero" id="link-hero" className="hover:text-[#4A0E17] transition-colors py-1">Home</a>
               <a href="#about" id="link-about" className="hover:text-[#4A0E17] transition-colors py-1">About</a>
-              <a href="#events" id="link-events" className="hover:text-[#4A0E17] transition-colors py-1">Events</a>
-              <a href="#cuisine" id="link-cuisine" className="hover:text-[#4A0E17] transition-colors py-1">Cuisine &amp; Jain Food</a>
               <a href="#gallery" id="link-gallery" className="hover:text-[#4A0E17] transition-colors py-1">Gallery</a>
-              <a href="#amenities" id="link-amenities" className="hover:text-[#4A0E17] transition-colors py-1">Capacity &amp; Amenities</a>
-              <a href="#testimonials" id="link-testimonials" className="hover:text-[#4A0E17] transition-colors py-1">Reviews</a>
               <a href="#location" id="link-location" className="hover:text-[#4A0E17] transition-colors py-1">Location</a>
             </nav>
 
             <div className="hidden sm:flex items-center gap-3">
               <a
                 href="tel:09833557900"
+                id="nav-call-btn"
                 className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-semibold text-[#4A0E17] bg-[#F9F4DF] hover:bg-[#F2E4B8] border border-[#EAD38F] transition-all shadow-sm"
               >
                 <Phone className="w-3.5 h-3.5 text-[#947219]" />
@@ -346,7 +343,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="xl:hidden flex items-center">
+            <div className="lg:hidden flex items-center">
               <button
                 type="button"
                 id="mobile-menu-toggle"
@@ -362,7 +359,7 @@ export default function HomePage() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="xl:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+          <div className="lg:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
             <a
               href="#hero"
               onClick={() => setMobileMenuOpen(false)}
@@ -375,21 +372,7 @@ export default function HomePage() {
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-[#4A0E17] hover:bg-stone-50"
             >
-              About Venue
-            </a>
-            <a
-              href="#events"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-[#4A0E17] hover:bg-stone-50"
-            >
-              Events Hosted
-            </a>
-            <a
-              href="#cuisine"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-[#4A0E17] hover:bg-stone-50"
-            >
-              Cuisine &amp; Jain Food
+              About
             </a>
             <a
               href="#gallery"
@@ -399,25 +382,11 @@ export default function HomePage() {
               Gallery
             </a>
             <a
-              href="#amenities"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-[#4A0E17] hover:bg-stone-50"
-            >
-              Capacity (300 Seated / 500 Floating) &amp; Amenities
-            </a>
-            <a
-              href="#testimonials"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-[#4A0E17] hover:bg-stone-50"
-            >
-              Reviews (4.8 ★)
-            </a>
-            <a
               href="#location"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-[#4A0E17] hover:bg-stone-50"
             >
-              Location &amp; Map
+              Location
             </a>
             <div className="pt-2 flex flex-col gap-2">
               <a
@@ -426,14 +395,6 @@ export default function HomePage() {
               >
                 <Phone className="w-4 h-4" />
                 <span>Call Now: 098335 57900</span>
-              </a>
-              <a
-                href={`https://wa.me/919833557900?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-[#25D366] flex items-center justify-center gap-2 shadow"
-              >
-                <span>WhatsApp Us: +91 98335 57900</span>
               </a>
               <a
                 href="#booking"
@@ -451,7 +412,7 @@ export default function HomePage() {
       <section id="hero" className="relative min-h-[92vh] flex items-center justify-center text-white overflow-hidden">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=80')" }}
+          style={{ backgroundImage: "url('/banquetthree.jpeg')" }}
         />
 
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#220409]/92 via-stone-950/85 to-[#220409]/95" />
@@ -623,10 +584,10 @@ export default function HomePage() {
 
           </div>
 
-          <div className="lg:col-span-6 relative">
+          <div className="lg:col-span-6 relative space-y-4">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80"
+                src="/banquettwo.jpeg"
                 alt="Spacious AC Hall at Elegant Banquets Juhu"
                 className="w-full h-[460px] object-cover"
               />
@@ -635,13 +596,13 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-[11px] font-bold uppercase tracking-wider text-[#947219] block">
-                      Prime Location
+                      Prime Location · Ground Floor
                     </span>
                     <h3 className="font-serif text-lg font-bold text-[#220409]">
                       Bloom Hotel, Juhu Tara Road
                     </h3>
                     <p className="text-xs text-stone-600 mt-0.5">
-                      Ground floor · Valet parking available · 300 Seated / 500 Floating
+                      Spacious AC Hall · Valet Parking · 300 Seated / 500 Floating
                     </p>
                   </div>
                   <a
@@ -652,6 +613,22 @@ export default function HomePage() {
                     <Phone className="w-5 h-5" />
                   </a>
                 </div>
+              </div>
+            </div>
+
+            {/* Quick Real Photo Strip */}
+            <div className="grid grid-cols-3 gap-3">
+              <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-md h-24 group cursor-pointer" onClick={() => setSelectedPhoto(GALLERY_DATA[0])}>
+                <img src="/banquetthree.jpeg" alt="Grand AC Hall" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <span className="absolute bottom-1 inset-x-1 text-[10px] text-center font-semibold text-white bg-black/60 rounded px-1 backdrop-blur-xs truncate">Grand Hall</span>
+              </div>
+              <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-md h-24 group cursor-pointer" onClick={() => setSelectedPhoto(GALLERY_DATA[2])}>
+                <img src="/banquetone.jpeg" alt="Grand Entrance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <span className="absolute bottom-1 inset-x-1 text-[10px] text-center font-semibold text-white bg-black/60 rounded px-1 backdrop-blur-xs truncate">Entrance</span>
+              </div>
+              <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-md h-24 group cursor-pointer" onClick={() => setSelectedPhoto(GALLERY_DATA[3])}>
+                <img src="/banquetfour.jpeg" alt="Celebration Decor" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <span className="absolute bottom-1 inset-x-1 text-[10px] text-center font-semibold text-white bg-black/60 rounded px-1 backdrop-blur-xs truncate">Celebration</span>
               </div>
             </div>
           </div>
@@ -1012,7 +989,7 @@ export default function HomePage() {
 
             <div className="relative rounded-2xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80"
+                src="/banquetfour.jpeg"
                 alt="Banquet Seating at Elegant Banquets Juhu"
                 className="w-full h-72 object-cover"
               />
@@ -1201,6 +1178,44 @@ export default function HomePage() {
               <div className="flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 font-semibold">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Google Verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* GOOGLE PROFILE & 4.8★ RATING BADGE SHOWCASE */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+          <div className="p-6 rounded-3xl bg-gradient-to-r from-[#FAF5EE] to-[#FDFBF7] border border-[#D4AF37]/50 shadow-md flex flex-col sm:flex-row items-center gap-6">
+            <div
+              className="sm:w-2/5 shrink-0 rounded-2xl overflow-hidden border-2 border-stone-200 shadow-md cursor-pointer group relative"
+              onClick={() => setSelectedPhoto(GALLERY_DATA[5])}
+            >
+              <img
+                src="/screenshot.png"
+                alt="Google Rating Badge 4.8 Stars - Elegant Banquets Juhu"
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform"
+              />
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+                Click to Enlarge
+              </div>
+            </div>
+            <div className="sm:w-3/5 space-y-2 text-center sm:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F9F4DF] border border-[#EAD38F] text-xs font-bold text-[#715413]">
+                <Star className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />
+                <span>4.8 ★ Google Verified · 137 Reviews</span>
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-[#220409]">
+                Rated 4.8 Out of 5 on Google
+              </h3>
+              <p className="text-stone-600 text-sm leading-relaxed">
+                Trusted by hundreds of families and corporate event planners across Mumbai for milestone celebrations at Bloom Hotel on Juhu Tara Road.
+              </p>
+              <div className="pt-1 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-stone-500 font-medium">
+                <span className="flex items-center gap-1 text-emerald-700">
+                  <CheckCircle2 className="w-4 h-4" /> 100% Genuine Reviews
+                </span>
+                <span>•</span>
+                <span>Bloom Hotel, Juhu Tara Rd</span>
               </div>
             </div>
           </div>
