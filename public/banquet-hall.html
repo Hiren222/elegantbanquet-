@@ -1,0 +1,687 @@
+<!-- Standalone Single HTML File for Elegant Banquets Juhu -->
+<!-- Open in any browser or upload directly to your web hosting server (Netlify, Vercel, cPanel, GitHub Pages) -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegant Banquets Juhu | Luxury AC Banquet Hall in Juhu, Mumbai</title>
+  <meta name="description" content="Located on Juhu Tara Road at Bloom Hotel, Elegant Banquets Juhu features a spacious AC hall with 300 seated / 500 floating capacity. Multi-cuisine catering &amp; Jain food available for Weddings, Haldi, Mehendi, Cocktails, Corporate &amp; Birthdays. Call 098335 57900." />
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              DEFAULT: '#4A0E17',
+              50: '#FAF2F3',
+              100: '#F4E3E5',
+              200: '#E7C2C7',
+              700: '#5F141F',
+              800: '#4A0E17',
+              900: '#34080F',
+              950: '#220409',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              50: '#FDFBF4',
+              100: '#F9F4DF',
+              200: '#F2E4B8',
+              300: '#EAD38F',
+              400: '#E1C264',
+              500: '#D4AF37',
+              600: '#B89326',
+              700: '#947219',
+              800: '#715413',
+            },
+            ivory: {
+              DEFAULT: '#FDFBF7',
+              warm: '#FAF5EE',
+              muted: '#F4EDE2',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom horizontal marquee loop for testimonials */
+    @keyframes marqueeLeft {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .marquee-track-horizontal {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 32s linear infinite;
+    }
+    .marquee-container:hover .marquee-track-horizontal {
+      animation-play-state: paused;
+    }
+
+    /* Gallery Card Viewport Entrance */
+    .gallery-item {
+      opacity: 0;
+      transform: translateY(28px) scale(0.97);
+      transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+      will-change: opacity, transform;
+    }
+    .gallery-item.in-view {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  </style>
+</head>
+
+<body class="bg-ivory text-stone-800 font-sans antialiased selection:bg-gold-200 selection:text-maroon-900">
+
+  <!-- TOP BAR -->
+  <div class="bg-maroon-950 text-stone-300 text-xs py-2 px-4 border-b border-maroon-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-200 font-semibold text-[11px] border border-gold-500/30">
+          ★ 4.8 · 137 Reviews
+        </span>
+        <span class="text-stone-300 hidden md:inline">
+          Located on Juhu Tara Road at Bloom Hotel, Mumbai 400049
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:09833557900" class="flex items-center gap-1.5 text-stone-200 hover:text-gold-400 transition-colors">
+          <span>Call: 098335 57900</span>
+        </a>
+        <span class="text-stone-600">|</span>
+        <a href="https://wa.me/919833557900?text=Hello%20Elegant%20Banquets%20Juhu%2C%20I%20would%20like%20to%20inquire%20about%20booking%20your%20spacious%20AC%20hall." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
+          WhatsApp: +91 98335 57900
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header id="navbar" class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-stone-200 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" id="nav-logo" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-full bg-maroon-900 text-gold-400 flex items-center justify-center border border-gold-400/40 shadow-inner group-hover:scale-105 transition-transform">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-maroon-950 block leading-tight">Elegant Banquets Juhu</span>
+            <span class="text-[10px] tracking-widest uppercase text-gold-700 font-medium block">Ground Floor, Bloom Hotel · Juhu, Mumbai</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-stone-700">
+          <a href="#hero" class="hover:text-maroon-900 transition-colors py-1">Home</a>
+          <a href="#about" class="hover:text-maroon-900 transition-colors py-1">About</a>
+          <a href="#events" class="hover:text-maroon-900 transition-colors py-1">Events</a>
+          <a href="#cuisine" class="hover:text-maroon-900 transition-colors py-1">Cuisine &amp; Jain Food</a>
+          <a href="#gallery" class="hover:text-maroon-900 transition-colors py-1">Gallery</a>
+          <a href="#amenities" class="hover:text-maroon-900 transition-colors py-1">Capacity &amp; Amenities</a>
+          <a href="#testimonials" class="hover:text-maroon-900 transition-colors py-1">Reviews</a>
+          <a href="#location" class="hover:text-maroon-900 transition-colors py-1">Location</a>
+        </nav>
+
+        <!-- CTA Actions in Nav -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:09833557900" class="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-semibold text-maroon-900 bg-gold-100 hover:bg-gold-200 border border-gold-300 shadow-sm transition-all">
+            Call: 098335 57900
+          </a>
+          <a href="#booking" id="nav-book-btn" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-maroon-900 hover:bg-maroon-800 shadow-md hover:shadow-lg transition-all border border-gold-400/30">
+            Book Your Date
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="xl:hidden flex items-center">
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg text-stone-700 hover:text-maroon-900 hover:bg-stone-100 transition-colors">
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+      <a href="#hero" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">About Venue</a>
+      <a href="#events" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Events Hosted</a>
+      <a href="#cuisine" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Cuisine &amp; Jain Food</a>
+      <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Gallery</a>
+      <a href="#amenities" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Capacity (300 Seated / 500 Floating)</a>
+      <a href="#testimonials" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Reviews (4.8 ★)</a>
+      <a href="#location" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-maroon-900 hover:bg-ivory-warm">Location &amp; Map</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="tel:09833557900" class="w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-maroon-900 bg-gold-100 border border-gold-300">Call Now: 098335 57900</a>
+        <a href="https://wa.me/919833557900?text=Hello%20Elegant%20Banquets%20Juhu%2C%20I%20would%20like%20to%20inquire%20about%20booking%20your%20spacious%20AC%20hall." target="_blank" rel="noopener noreferrer" class="w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-[#25D366]">Chat on WhatsApp</a>
+        <a href="#booking" class="mobile-nav-link block w-full text-center px-4 py-3 rounded-full text-sm font-semibold text-white bg-maroon-900 hover:bg-maroon-800 shadow">Book Your Date</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center justify-center text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105" 
+         style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=80');">
+    </div>
+    
+    <div class="absolute inset-0 z-10 bg-gradient-to-b from-maroon-950/92 via-stone-950/85 to-maroon-950/95"></div>
+    <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent z-20 opacity-75"></div>
+
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      
+      <!-- RATING BADGE NEAR HERO -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/60 border border-gold-400/60 backdrop-blur-md mb-6 shadow-xl">
+        <span class="text-gold-400">★★★★★</span>
+        <span class="text-xs sm:text-sm font-bold text-gold-200 tracking-wide">4.8 ★ · 137 Reviews</span>
+        <span class="text-stone-400 text-xs hidden sm:inline">|</span>
+        <span class="text-xs font-medium text-stone-200 hidden sm:inline">Bloom Hotel, Juhu Tara Road, Mumbai</span>
+      </div>
+
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-5 leading-tight drop-shadow-md">
+        Elegant Banquets Juhu
+      </h1>
+
+      <p class="font-serif italic text-xl sm:text-2xl md:text-3xl text-gold-200 font-light mb-6 drop-shadow">
+        "Where Every Celebration Becomes a Memory"
+      </p>
+
+      <p class="max-w-3xl mx-auto text-base sm:text-lg text-stone-200 font-light mb-10 leading-relaxed">
+        Located on Juhu Tara Road at Bloom Hotel, our spacious AC hall provides a majestic setting with 300 seated / 500 floating capacity. Masterful culinary offerings across Indian, Italian, Mexican, Oriental, Thai, and dedicated 100% Jain food.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5">
+        <a href="#booking" id="hero-book-btn" class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-white bg-maroon-900 hover:bg-maroon-800 border-2 border-gold-400/70 shadow-xl hover:shadow-2xl hover:scale-105 transition-all text-base flex items-center justify-center gap-2">
+          <span>Book Your Date</span>
+          <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+
+        <a href="tel:09833557900" class="w-full sm:w-auto px-7 py-4 rounded-full font-semibold text-stone-900 bg-gold-200 hover:bg-gold-300 shadow-xl hover:scale-105 transition-all text-base flex items-center justify-center gap-2.5">
+          <span>Call Now: 098335 57900</span>
+        </a>
+
+        <a href="https://wa.me/919833557900?text=Hello%20Elegant%20Banquets%20Juhu%2C%20I%20would%20like%20to%20inquire%20about%20booking%20your%20spacious%20AC%20hall." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           id="hero-whatsapp-btn"
+           class="w-full sm:w-auto px-7 py-4 rounded-full font-semibold text-white bg-[#25D366] hover:bg-[#20ba59] shadow-xl hover:scale-105 transition-all text-base flex items-center justify-center gap-2.5">
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+
+      <div class="mt-14 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4 text-stone-300 text-xs sm:text-sm">
+        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <span class="block text-gold-200 font-serif text-xl sm:text-2xl font-bold">300 / 500</span>
+          <span class="text-stone-300 font-medium">300 Seated / 500 Floating</span>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <span class="block text-gold-200 font-serif text-xl sm:text-2xl font-bold">Spacious AC</span>
+          <span class="text-stone-300 font-medium">Centralized Cooling</span>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <span class="block text-gold-200 font-serif text-xl sm:text-2xl font-bold">Juhu Tara Rd</span>
+          <span class="text-stone-300 font-medium">Ground Floor, Bloom Hotel</span>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <span class="block text-gold-200 font-serif text-xl sm:text-2xl font-bold">Jain &amp; Multi-Cuisine</span>
+          <span class="text-stone-300 font-medium">6 Gourmet Cuisines</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-ivory to-transparent z-20"></div>
+  </section>
+
+  <!-- 2. ABOUT SECTION -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300">
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">About Our Venue</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-maroon-950 leading-tight">
+          An Exquisite Venue on Juhu Tara Road
+        </h2>
+
+        <div class="space-y-4 text-stone-600 text-base sm:text-lg leading-relaxed">
+          <p>
+            <strong class="text-stone-900 font-semibold">Located on Juhu Tara Road</strong>, at the ground floor of Bloom Hotel in Shivaji Nagar, Juhu, Mumbai, <strong class="text-maroon-900 font-serif">Elegant Banquets Juhu</strong> offers an idyllic, centrally cooled destination for life&apos;s greatest celebrations.
+          </p>
+          <p>
+            Our <strong class="text-stone-900 font-semibold">spacious AC hall</strong> is carefully designed to accommodate <strong class="text-stone-900 font-semibold">300 seated or up to 500 floating guests</strong> in supreme comfort, surrounded by grand crystal chandeliers and regal stage arrangements.
+          </p>
+          <p>
+            From traditional Weddings, vibrant Haldi and Mehendi ceremonies to energetic Cocktail Parties, prestigious Corporate Events, and milestone Birthday Parties, our hospitality team ensures flawless execution.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-stone-900 text-sm">Located on Juhu Tara Road</h4>
+            <p class="text-xs text-stone-500 mt-0.5">Ground floor, Bloom Hotel, Juhu</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-stone-900 text-sm">Spacious AC Hall</h4>
+            <p class="text-xs text-stone-500 mt-0.5">High-tonnage central cooling</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-stone-900 text-sm">300 Seated / 500 Floating</h4>
+            <p class="text-xs text-stone-500 mt-0.5">Flexible seating and layouts</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+            <h4 class="font-bold text-stone-900 text-sm text-emerald-800">Jain Food Available</h4>
+            <p class="text-xs text-stone-500 mt-0.5">100% pure separate preparation</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80" alt="Spacious AC Hall at Elegant Banquets Juhu" class="w-full h-[460px] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-gold-300 text-stone-900">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-gold-700 block">Prime Mumbai Venue</span>
+            <h3 class="font-serif text-lg font-bold text-maroon-950">Bloom Hotel, Juhu Tara Road</h3>
+            <p class="text-xs text-stone-600 mt-0.5">Ground floor · Valet parking available · 300 Seated / 500 Floating</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. EVENTS SECTION -->
+  <section id="events" class="py-24 bg-ivory-warm border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300 mb-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">Celebrations &amp; Gatherings</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-maroon-950 mb-4">Events We Host</h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          Specialized event styling, mandap decor, and gourmet catering for every celebratory milestone.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+          <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Weddings</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">Grand royal mandap setup, regal stage, luxurious bridal entry, and banquet dining for your dream wedding.</p>
+          <span class="text-xs font-bold text-gold-700 uppercase tracking-wider">300 Seated / 500 Floating</span>
+        </div>
+        <div class="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+          <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Haldi</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">Sun-drenched yellow marigold decor, traditional brass urlis, floral jewellery lounge, and festive joy.</p>
+          <span class="text-xs font-bold text-gold-700 uppercase tracking-wider">Vibrant &amp; Traditional</span>
+        </div>
+        <div class="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+          <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Mehendi</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">Bohemian canopy seating, intricate floral backdrops, live snack stations, and dedicated henna corners.</p>
+          <span class="text-xs font-bold text-gold-700 uppercase tracking-wider">Festive &amp; Chic</span>
+        </div>
+        <div class="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+          <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Cocktail Parties</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">Chic ambient lighting, state-of-the-art sound console, expansive dance floor, and live beverage counters.</p>
+          <span class="text-xs font-bold text-gold-700 uppercase tracking-wider">High Energy &amp; Glamour</span>
+        </div>
+        <div class="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+          <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Corporate Events</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">Annual award galas, brand launches, executive seminars, and networking banquets with high-speed AV systems.</p>
+          <span class="text-xs font-bold text-gold-700 uppercase tracking-wider">Executive &amp; Professional</span>
+        </div>
+        <div class="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+          <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Birthday Parties</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">Milestone 1st, 25th, 50th jubilees, custom theme cakes, playful photo booths, and gourmet family feasts.</p>
+          <span class="text-xs font-bold text-gold-700 uppercase tracking-wider">Joyful &amp; Memorable</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. CUISINE SECTION -->
+  <section id="cuisine" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300 mb-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">Master-Crafted Feasts</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-maroon-950 mb-4">Gourmet Cuisines</h2>
+      <p class="text-stone-600 text-base sm:text-lg">
+        Multi-course buffets, authentic traditional spreads, and international live cooking stations.
+      </p>
+
+      <div class="mt-6 inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 shadow-sm text-sm">
+        <span>🌱</span>
+        <span class="font-medium">
+          <strong class="font-bold">100% Pure Jain Food Available:</strong> Prepared with dedicated culinary care, zero root vegetables, zero onion, and zero garlic with uncompromising taste.
+        </span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-7 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+        <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Indian Delicacies</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Royal North Indian gravies, slow-simmered Dal Makhani, Dum Biryanis, tandoor kebabs, and live Chaat bazaar.</p>
+      </div>
+      <div class="p-7 rounded-2xl bg-white border-2 border-emerald-300 bg-emerald-50/40 shadow-sm hover:shadow-xl transition-all">
+        <h3 class="font-serif text-2xl font-bold text-emerald-900 mb-2">Jain Food Available</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Strictly 100% pure Jain recipes prepared with separate utensils, authentic seasonings, and total sanctity.</p>
+      </div>
+      <div class="p-7 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+        <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Italian Cuisine</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Handcrafted pastas, artisanal thin-crust pizzas, creamy risottos, bruschettas, and herb garlic breads.</p>
+      </div>
+      <div class="p-7 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+        <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Mexican Specialties</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Sizzling fajitas, crispy corn tacos, stuffed quesadillas, loaded nachos, and house-made guacamole &amp; salsas.</p>
+      </div>
+      <div class="p-7 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+        <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Oriental Cuisine</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Steaming dim sums, stir-fried wok noodles, vegetable manchurian, and fragrant fried rice bowls.</p>
+      </div>
+      <div class="p-7 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all">
+        <h3 class="font-serif text-2xl font-bold text-maroon-950 mb-2">Thai Feasts</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Aromatic Thai green and red curries, authentic Pad Thai noodles, Som Tum raw papaya salad, and jasmine rice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CAPACITY & AMENITIES SECTION -->
+  <section id="amenities" class="py-24 bg-ivory-warm border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300 mb-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">Hall Infrastructure</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-maroon-950 mb-4">Capacity &amp; Amenities</h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          Designed to host 300 seated and up to 500 floating guests with world-class facilities and seamless hospitality.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm">
+          <h3 class="font-serif text-xl font-bold text-maroon-950 mb-2">Spacious AC Hall</h3>
+          <p class="text-stone-600 text-sm">Centralized high-tonnage climate control ensuring refreshing guest comfort throughout your celebration.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm">
+          <h3 class="font-serif text-xl font-bold text-maroon-950 mb-2">300 Seated / 500 Floating</h3>
+          <p class="text-stone-600 text-sm">Optimal ballroom dimensions for theater, round-table, or dynamic cocktail reception layouts.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm">
+          <h3 class="font-serif text-xl font-bold text-maroon-950 mb-2">Valet &amp; Hotel Parking</h3>
+          <p class="text-stone-600 text-sm">Uniformed valet parking directly at Bloom Hotel entrance on Juhu Tara Road.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm">
+          <h3 class="font-serif text-xl font-bold text-maroon-950 mb-2">100% Power Backup</h3>
+          <p class="text-stone-600 text-sm">Continuous uninterrupted power backed by automatic heavy-duty industrial generators.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONIALS SECTION (Using real ones) -->
+  <section id="testimonials" class="py-24 bg-white border-b border-stone-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300 mb-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">Client Reviews</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-maroon-950 mb-3">Celebration Stories</h2>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ivory-warm border border-gold-400/50 text-stone-800 text-sm font-bold my-2">
+          <span class="text-gold-500">★★★★★</span>
+          <span>4.8 ★ · 137 Google Reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Real Reviews -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="p-8 rounded-3xl bg-ivory border-2 border-gold-400/50 shadow-md">
+        <div class="text-gold-500 text-lg mb-4">★★★★★</div>
+        <p class="font-serif text-xl sm:text-2xl text-maroon-950 font-medium italic leading-relaxed mb-6">
+          &ldquo;The AC hall is spacious and beautifully designed, making it perfect for any occasion.&rdquo;
+        </p>
+        <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+          <h4 class="font-serif font-bold text-maroon-950 text-lg">Priyank Naik</h4>
+          <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">Verified Review</span>
+        </div>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-ivory border-2 border-gold-400/50 shadow-md">
+        <div class="text-gold-500 text-lg mb-4">★★★★★</div>
+        <p class="font-serif text-xl sm:text-2xl text-maroon-950 font-medium italic leading-relaxed mb-6">
+          &ldquo;Beautifully decorated, delicious food with a variety of options.&rdquo;
+        </p>
+        <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+          <h4 class="font-serif font-bold text-maroon-950 text-lg">Amrita Dalal</h4>
+          <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">Verified Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BOOKING FORM SECTION -->
+  <section id="booking" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="bg-white rounded-3xl border border-stone-200 shadow-xl overflow-hidden p-8 sm:p-12">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-maroon-950 mb-3">Book Your Date</h2>
+        <p class="text-stone-600 text-sm sm:text-base">Check hall availability for your celebration at Elegant Banquets Juhu.</p>
+        <div class="mt-4 flex items-center justify-center gap-3">
+          <a href="tel:09833557900" class="px-4 py-2 rounded-full text-xs font-bold text-maroon-900 bg-gold-100 border border-gold-300">Call: 098335 57900</a>
+          <a href="https://wa.me/919833557900?text=Hello%20Elegant%20Banquets%20Juhu%2C%20I%20would%20like%20to%20inquire%20about%20booking%20your%20spacious%20AC%20hall." target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full text-xs font-bold text-white bg-[#25D366]">WhatsApp Us</a>
+        </div>
+      </div>
+
+      <form id="booking-form" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Full Name *</label>
+            <input type="text" required placeholder="e.g. Priyank Naik" class="w-full px-4 py-3.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Phone Number *</label>
+            <input type="tel" required placeholder="e.g. 098335 57900" class="w-full px-4 py-3.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Event Date *</label>
+            <input type="date" required class="w-full px-4 py-3.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Event Type *</label>
+            <select required class="w-full px-4 py-3.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400">
+              <option value="">Select event...</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Haldi">Haldi</option>
+              <option value="Mehendi">Mehendi</option>
+              <option value="Cocktail Party">Cocktail Party</option>
+              <option value="Corporate Event">Corporate Event</option>
+              <option value="Birthday Party">Birthday Party</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-4 rounded-full font-semibold text-white bg-maroon-900 hover:bg-maroon-800 shadow-lg text-base">
+          Check Availability &amp; Request Quote
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 8. LOCATION + MAP SECTION -->
+  <section id="location" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-100 border border-gold-300">
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-800">Location &amp; Visit</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-maroon-950 leading-tight">
+          Located on Juhu Tara Road, Mumbai
+        </h2>
+
+        <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm space-y-4">
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm uppercase">Venue Address</h4>
+            <p class="text-stone-700 text-base mt-0.5">
+              Ground floor, Bloom Hotel, Juhu Tara Rd,<br />
+              Shivaji Nagar, Juhu, Mumbai 400049
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100">
+            <h4 class="font-bold text-stone-900 text-sm uppercase">Direct Phone</h4>
+            <p class="text-stone-700 text-base mt-0.5 font-bold text-maroon-900">
+              <a href="tel:09833557900" class="hover:underline">098335 57900</a>
+            </p>
+            <p class="text-stone-600 text-xs mt-0.5">
+              WhatsApp: <a href="https://wa.me/919833557900" class="text-emerald-600 font-semibold hover:underline">+91 98335 57900</a>
+            </p>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Ground+floor+Bloom+Hotel+Juhu+Tara+Rd+Shivaji+Nagar+Juhu+Mumbai+400049" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white bg-maroon-900 hover:bg-maroon-800 shadow-md text-sm">
+          <span>Get Directions on Google Maps</span>
+        </a>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="w-full h-[400px] sm:h-[460px] rounded-3xl overflow-hidden shadow-xl border-2 border-stone-200 relative bg-stone-100">
+          <iframe
+            id="google-map-iframe"
+            title="Elegant Banquets Juhu Location Map - Bloom Hotel, Juhu Tara Road"
+            class="w-full h-full border-0"
+            src="https://maps.google.com/maps?q=Bloom%20Hotel%2C%20Juhu%20Tara%20Rd%2C%20Shivaji%20Nagar%2C%20Juhu%2C%20Mumbai%2C%20Maharashtra%20400049&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. FOOTER -->
+  <footer class="bg-maroon-950 text-stone-300 border-t border-maroon-800/60 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-white mb-4">Elegant Banquets Juhu</h3>
+          <p class="text-stone-400 text-sm leading-relaxed mb-4">
+            Where every celebration becomes a memory. Located on Juhu Tara Road at Bloom Hotel, featuring a spacious AC hall with 300 seated / 500 floating capacity.
+          </p>
+          <div class="text-xs text-gold-400">4.8 ★ · 137 Google Reviews</div>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-bold text-gold-200 mb-4">Celebrations</h4>
+          <ul class="text-sm space-y-2 text-stone-300">
+            <li>Weddings &amp; Receptions</li>
+            <li>Haldi &amp; Mehendi Ceremonies</li>
+            <li>Cocktail Parties &amp; Sangeet</li>
+            <li>Corporate Galas &amp; Seminars</li>
+            <li>Birthday Parties &amp; Jubilees</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-bold text-gold-200 mb-4">Contact Info</h4>
+          <p class="text-sm text-stone-300 leading-relaxed">
+            Ground floor, Bloom Hotel, Juhu Tara Rd,<br />
+            Shivaji Nagar, Juhu, Mumbai 400049
+          </p>
+          <p class="text-sm text-stone-300 mt-3 font-semibold">
+            Phone: <a href="tel:09833557900" class="text-gold-300 hover:underline">098335 57900</a>
+          </p>
+          <p class="text-sm text-stone-300 mt-1">
+            WhatsApp: <a href="https://wa.me/919833557900" class="text-emerald-400 hover:underline">+91 98335 57900</a>
+          </p>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-maroon-800 text-center text-xs text-stone-400">
+        &copy; 2026 Elegant Banquets Juhu. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <a href="tel:09833557900" class="flex items-center gap-2 px-4 py-3 bg-maroon-900 hover:bg-maroon-800 text-white rounded-full shadow-2xl border border-gold-400/50 text-xs font-bold transition-all hover:scale-105">
+      <span>Call: 098335 57900</span>
+    </a>
+    <a href="https://wa.me/919833557900?text=Hello%20Elegant%20Banquets%20Juhu%2C%20I%20would%20like%20to%20inquire%20about%20booking%20your%20spacious%20AC%20hall." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-2xl text-xs font-bold transition-all hover:scale-105">
+      <span>Chat on WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    // Mobile navigation toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    // Booking form submit simulated handler
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for inquiring with Elegant Banquets Juhu! Our manager will call you at 098335 57900 shortly.');
+        bookingForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

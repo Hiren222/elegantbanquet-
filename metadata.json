@@ -1,0 +1,8 @@
+{
+  "name": "Elegant banquet juhu",
+  "description": "Elegant Banquets Juhu - Luxury AC banquet hall on Juhu Tara Road, Mumbai with 300 seated / 500 floating capacity, multi-cuisine catering & Jain food for Weddings, Haldi, Mehendi, Cocktails, Corporate & Birthdays.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
